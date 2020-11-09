@@ -55,7 +55,7 @@ const NewFeedP = styled.p`
 `;
 
 const BannerImg = styled.img`
-  width: 100vw;
+  width: 100%;
   max-width: 1920px;
   object-fit: cover;
 `;
