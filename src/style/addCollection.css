@@ -1,0 +1,21 @@
+.banner-carousel .ant-carousel .slick-dots li button {
+  background: gray;
+  opacity: 0.4;
+  height: 5px;
+  /* width: 45px; */
+}
+
+.banner-carousel .ant-carousel .slick-dots li.slick-active button {
+  opacity: 1;
+  background: #f15e2c;
+  height: 5px;
+  /* width: 45px; */
+}
+  
+.banner-carousel .ant-carousel .slick-dots-top {
+  top: 295px !important;
+}
+
+.banner-carousel .ant-carousel .slick-dots {
+  height:  20px !important;
+}
