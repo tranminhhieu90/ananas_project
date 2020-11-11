@@ -1,4 +1,5 @@
 import React from "react";
+import { Row, Col } from "antd";
 import styled from "styled-components";
 import AnanasLogo from "../asset/Logo_Ananas.png";
 import DiscoverYou from "../asset/svg/DiscoverYOU.svg";
@@ -7,27 +8,43 @@ import { SearchOutlined } from "@ant-design/icons";
 function mainMenu() {
   return (
     <Menu>
-      <div style={{width: '10%'}}>
-        <LogoImg src={AnanasLogo}></LogoImg>
-      </div>
-      <div style={{width: '70%'}}>
-        <UlMenu>
-          <li><span>SẢN PHẨM</span></li>
-          <li><span>NAM</span></li>
-          <li><span>NỮ</span></li>
-          <li><span>SALE OFF</span></li>
-          <li>
-            <img src={DiscoverYou} alt='discover'></img>
-          </li>
-        </UlMenu>
-      </div>
-      <div style={{width: '20%'}}>
-        <Input
-          size="large"
-          placeholder="Tìm Kiếm"
-          prefix={<SearchOutlined />}
-        />
-      </div>
+      <Row gutter={8} style={{alignItems: 'center', width: '100%'}}>
+        <Col span={3}>
+          <div>
+            <LogoImg src={AnanasLogo}></LogoImg>
+          </div>
+        </Col>
+        <Col span={16}>
+          <div>
+            <UlMenu>
+              <li>
+                <span>SẢN PHẨM</span>
+              </li>
+              <li>
+                <span>NAM</span>
+              </li>
+              <li>
+                <span>NỮ</span>
+              </li>
+              <li>
+                <span>SALE OFF</span>
+              </li>
+              <li>
+                <img src={DiscoverYou} alt="discover"></img>
+              </li>
+            </UlMenu>
+          </div>
+        </Col>
+        <Col span={5}>
+          <div >
+            <Input
+              size="large"
+              placeholder="Tìm Kiếm"
+              prefix={<SearchOutlined />}
+            />
+          </div>
+        </Col>
+      </Row>
     </Menu>
   );
 }
@@ -48,14 +65,13 @@ const UlMenu = styled.ul`
   display: flex;
   list-style-type: none;
   margin: 0;
-
   li {
     margin-right: 35px;
     font-size: 1.5em;
     font-weight: 800;
     border-right: 2px solid gray;
 
-    padding: 12px 25px 0px 0px; 
+    padding: 12px 25px 0px 0px;
   }
   li:nth-last-child(1) {
     margin-right: 0px;

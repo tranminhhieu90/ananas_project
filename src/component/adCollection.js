@@ -8,8 +8,8 @@ import Banner3 from "../asset/image/banner3.jpg";
 import "../style/addCollection.css";
 function AdCollection() {
   return (
-    <div style={{ marginTop: 80 }}>
-      <Row gutter={16} style={{ marginLeft: 15, marginRight: 15 }}>
+    <div style={{ marginTop: 80, marginLeft: '5%', marginRight: '5%' }}>
+      <Row gutter={16} >
         <Col span={12} className="banner-carousel">
           <Carousel dotPosition={'top'}>
             <div>

@@ -7,13 +7,19 @@ function shareFix() {
   return (
     <ShareFixDiv>
       <ShareIconDiv>
-        <a href="https://www.facebook.com/Ananas.vietnam/"><img src={FacebookIcon}></img></a>
+        <a href="https://www.facebook.com/Ananas.vietnam/">
+          <img alt="fb" src={FacebookIcon}></img>
+        </a>
       </ShareIconDiv>
-      <ShareIconDiv style={{marginTop: 10, marginBottom: 10}}>
-        <a href="https://www.instagram.com/accounts/login/?next=/ananasvn/"><img src={InstagramIcon}></img></a>
+      <ShareIconDiv style={{ marginTop: 10, marginBottom: 10 }}>
+        <a href="https://www.instagram.com/accounts/login/?next=/ananasvn/">
+          <img alt="insta" src={InstagramIcon}></img>
+        </a>
       </ShareIconDiv>
       <ShareIconDiv>
-        <a href="https://www.youtube.com/discoveryou"><img src={YoutubeIcon}></img></a>
+        <a href="https://www.youtube.com/discoveryou">
+          <img alt="youtube" src={YoutubeIcon}></img>
+        </a>
       </ShareIconDiv>
     </ShareFixDiv>
   );

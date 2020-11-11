@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Carousel } from "antd";
+import { Row, Col } from "antd";
 import styled from "styled-components";
 import Category1 from "../asset/image/catalogy-1.jpg";
 import Category2 from "../asset/image/catalogy-2.jpg";
@@ -7,13 +7,13 @@ import Category3 from "../asset/image/catalogy-3.jpg";
 
 function HomeBuy() {
   return (
-    <div style={{ marginTop: 25 }}>
+    <div style={{ marginTop: 25,  marginLeft: '5%', marginRight: '5%' }}>
       <Row
-        style={{ justifyContent: "center", marginLeft: 15, marginRight: 15 }}
+        style={{ justifyContent: "center" }}
       >
         <HomeBuyH3>DANH MỤC MUA HÀNG</HomeBuyH3>
       </Row>
-      <Row gutter={16} style={{ marginLeft: 15, marginRight: 15 }}>
+      <Row gutter={16}>
         <Col span={8}>
           <HomeBuyCategory
             style={{ backgroundImage: "url(" + Category1 + ")" }}
@@ -71,7 +71,8 @@ const HomeBuyCategory = styled.div`
   height: 270px;
   text-align: center;
   display: flex;
-  
+  background-size: cover;
+
   justify-content: center;
   align-items: center;
   text-align: center;

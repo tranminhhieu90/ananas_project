@@ -6,7 +6,10 @@ import CartFix from "../src/component/cartFix";
 import ShareFix from "../src/component/shareFix";
 import AdCollection from "../src/component/adCollection";
 import HomeBuy from "../src/component/homeBuy";
+import BestSeller from "../src/component/bestSeller";
 import "antd/dist/antd.css";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 function App() {
   return (
     <>
@@ -17,6 +20,7 @@ function App() {
       <ShareFix />
       <AdCollection />
       <HomeBuy />
+      <BestSeller />
     </>
   );
 }

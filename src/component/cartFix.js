@@ -6,7 +6,7 @@ function cartFix() {
     <CartFixDiv>
       <span>1</span>
       <br/>
-      <img src={ShoppingCart}></img>
+      <img src={ShoppingCart} alt='shoping-cart'></img>
     </CartFixDiv>
   );
 }
