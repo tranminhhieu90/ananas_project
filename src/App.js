@@ -7,6 +7,7 @@ import ShareFix from "../src/component/shareFix";
 import AdCollection from "../src/component/adCollection";
 import HomeBuy from "../src/component/homeBuy";
 import BestSeller from "../src/component/bestSeller";
+import Footer from "../src/component/footer";
 import "antd/dist/antd.css";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
@@ -21,6 +22,7 @@ function App() {
       <AdCollection />
       <HomeBuy />
       <BestSeller />
+      <Footer />
     </>
   );
 }
