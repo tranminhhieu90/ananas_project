@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Row, Col } from "antd";
 import StoreImg from "../asset/svg/Store.svg";
 import LogoAnanasFooter from "../asset/svg/Logo_Ananas_Footer.svg";
@@ -33,7 +34,9 @@ function Footer() {
             <Col span={6}>
               <FooterListP>VỀ CÔNG TY</FooterListP>
               <FooterUl>
-                <li>Dứa tuyển dụng</li>
+                <li>
+                  <Link to="/carrier">Dứa tuyển dụng</Link>
+                </li>
                 <li>Liên hệ nhượng quyền</li>
                 <li>Về Ananas</li>
               </FooterUl>
@@ -140,6 +143,15 @@ const FooterUl = styled.ul`
   li {
     font-size: 16px;
     color: #cccccc;
+
+    a {
+      font-size: 16px;
+      color: #cccccc;
+    }
+    a:hover {
+      color: #ff5f18;
+      cursor: pointer;
+    }
   }
 
   li:hover {

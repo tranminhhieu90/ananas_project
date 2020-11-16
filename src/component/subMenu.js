@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import Login from "../asset/svg/login_icon.svg";
 import ShoppingCart from "../asset/svg/icon_shopping_cart.svg";
 import Heart from "../asset/svg/icon_heart.svg";
@@ -11,7 +12,7 @@ function subMenu() {
     <SubMenu>
       <UlMenu>
         <li>
-          <Img src={Bill}></Img>Tra cứu đơn hàng
+          <Link to="/search-order"><Img src={Bill}></Img>Tra cứu đơn hàng</Link>
         </li>
         <li>
           <Img src={Store}></Img>Tìm cửa hàng
@@ -54,6 +55,13 @@ const UlMenu = styled.ul`
     margin-right: 5px;
   }
   li:hover {
+    color: #ff5f18;
+    cursor: pointer;
+  }
+  a {
+    color: #cccccc;
+  }
+  a:hover {
     color: #ff5f18;
     cursor: pointer;
   }

@@ -1,5 +1,6 @@
 import React from "react";
 import { Row, Col } from "antd";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import AnanasLogo from "../asset/Logo_Ananas.png";
 import DiscoverYou from "../asset/svg/DiscoverYOU.svg";
@@ -8,10 +9,10 @@ import { SearchOutlined } from "@ant-design/icons";
 function mainMenu() {
   return (
     <Menu>
-      <Row gutter={8} style={{alignItems: 'center', width: '100%'}}>
+      <Row gutter={8} style={{ alignItems: "center", width: "100%" }}>
         <Col span={3}>
           <div>
-            <LogoImg src={AnanasLogo}></LogoImg>
+            <Link to="/"> <LogoImg src={AnanasLogo}></LogoImg></Link>
           </div>
         </Col>
         <Col span={16}>
@@ -36,7 +37,7 @@ function mainMenu() {
           </div>
         </Col>
         <Col span={5}>
-          <div >
+          <div>
             <Input
               size="large"
               placeholder="Tìm Kiếm"
