@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Carousel } from "antd";
-import Banner from "../asset/image/lucky_luke.jpg";
+
 const newFeedArr = [
   {
     key: 1,
@@ -28,9 +28,6 @@ function NewFeed() {
           );
         })}
       </Carousel>
-      <div>
-        <BannerImg src={Banner}></BannerImg>
-      </div>
     </>
   );
 }
