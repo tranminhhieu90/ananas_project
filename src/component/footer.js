@@ -3,9 +3,9 @@ import { Row, Col } from "antd";
 import StoreImg from "../asset/svg/Store.svg";
 import LogoAnanasFooter from "../asset/svg/Logo_Ananas_Footer.svg";
 import styled from "styled-components";
-import FacebookIcon from "../asset/svg/icon_facebook_2.svg";
-import InstagramIcon from "../asset/svg/icon_instagram_2.svg";
-import YoutubeIcon from "../asset/svg/icon_youtube_2.svg";
+import FacebookIcon from "../asset/svg/icon_facebook_footer.svg";
+import InstagramIcon from "../asset/svg/icon_instagram_footer.svg";
+import YoutubeIcon from "../asset/svg/icon_youtube_footer.svg";
 import IconFooter from "../asset/icon_bocongthuong.png";
 function Footer() {
   return (
@@ -62,21 +62,23 @@ function Footer() {
                 ANANAS SOCIAL
               </FooterListP>
               <div>
-                <img src={FacebookIcon}></img>
-                <img src={InstagramIcon}></img>
-                <img src={YoutubeIcon}></img>
+                <IconFooterImg src={FacebookIcon}></IconFooterImg>
+                <IconFooterImg src={InstagramIcon}></IconFooterImg>
+                <IconFooterImg src={YoutubeIcon}></IconFooterImg>
               </div>
             </Col>
             <Col span={6}>
               <FooterListP>ĐĂNG KÝ NHẬN MAIL</FooterListP>
             </Col>
-            <Col span={12} style={{paddingLeft: 20}}>
+            <Col span={12} style={{ paddingLeft: 20 }}>
               <img src={LogoAnanasFooter}></img>
             </Col>
           </Row>
-          <Row style={{marginTop: "10%", display: 'flex', alignItems: 'center'}}>
-            <Col span={6} >
-              <img src={IconFooter} alt="icon- footer" ></img>
+          <Row
+            style={{ marginTop: "10%", display: "flex", alignItems: "center" }}
+          >
+            <Col span={6}>
+              <img src={IconFooter} alt="icon- footer"></img>
             </Col>
             <Col span={18}>
               <FooterListSpan>
@@ -126,6 +128,10 @@ const FooterListSpan = styled.span`
   font-size: 16px;
   letter-spacing: 1px;
   color: #808080;
+`;
+
+const IconFooterImg = styled.img`
+  padding: 0px 5px;
 `;
 
 const FooterUl = styled.ul`
