@@ -2,14 +2,18 @@
   background: gray;
   opacity: 0.4;
   height: 5px;
-  /* width: 45px; */
 }
 
+.banner-carousel .ant-carousel .slick-dots li button::before {
+  background: gray;
+  opacity: 0.4;
+  height: 5px;
+  display: none;
+}
 .banner-carousel .ant-carousel .slick-dots li.slick-active button {
   opacity: 1;
   background: #f15e2c;
   height: 5px;
-  /* width: 45px; */
 }
   
 .banner-carousel .ant-carousel .slick-dots-top {
@@ -18,4 +22,14 @@
 
 .banner-carousel .ant-carousel .slick-dots {
   height:  20px !important;
+  margin: 0;
+}
+
+.banner-carousel .ant-carousel .slick-dots li {
+  width: 50px;
+  height: 5px;
+}
+
+.banner-carousel  ul {
+ list-style: none !important;
 }

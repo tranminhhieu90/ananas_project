@@ -2,7 +2,7 @@ import React from "react";
 import { Row } from "antd";
 import styled from "styled-components";
 import Slider from "react-slick";
-import { BEST_SELLER } from "../config/constants";
+import { CONTAINS } from "../config/constants";
 import BigBanner from "../asset/image/Banner_Clothing.jpg";
 
 function SampleNextArrow(props) {
@@ -28,7 +28,6 @@ function SamplePrevArrow(props) {
 }
 
 function BestSeller() {
-  console.log("BEST_SELLER", BEST_SELLER);
   const settings = {
     dots: false,
     infinite: true,
@@ -45,31 +44,39 @@ function BestSeller() {
           <HomeBuyH3>BEST SELLER</HomeBuyH3>
         </Row>
         <Slider {...settings}>
-          {BEST_SELLER.map((item) => {
+          {CONTAINS.BEST_SELLER.map((item, index) => {
             return (
-              <SlideDiv>
+              <SlideDiv key={index}>
                 <img
                   style={{ width: "100%" }}
                   src={item.img_url}
                   alt="best-seller"
                 ></img>
-                <div>
-                  <h4>{item.name}</h4>
-                  <p>{item.color}</p>
-                  <div>
-                    <span>{`${item.sell_off_price} VND`}</span>
-                    <span
-                      style={{ textDecoration: "line-through" }}
-                    >{`${item.price} VND`}</span>
-                  </div>
-                </div>
+                <BestSellerInfo>
+                  <h3>{item.name}</h3>
+                  <p style={{ fontWeight: 700 }}>{item.color}</p>
+                  <BestSellerPrice>
+                    <div>
+                      <BestSellerPriceSpan>{`${item.sell_off_price} VND`}</BestSellerPriceSpan>
+                    </div>
+                    <div>
+                      <BestSellerPriceSpan
+                        style={{ textDecoration: "line-through" }}
+                      >{`${item.price} VND`}</BestSellerPriceSpan>
+                    </div>
+                  </BestSellerPrice>
+                </BestSellerInfo>
               </SlideDiv>
             );
           })}
         </Slider>
       </div>
       <div>
-        <BigBannerImg style={{width: '100%'}} src={BigBanner} alt="bigBanner"></BigBannerImg>
+        <BigBannerImg
+          style={{ width: "100%" }}
+          src={BigBanner}
+          alt="bigBanner"
+        ></BigBannerImg>
       </div>
     </>
   );
@@ -89,6 +96,18 @@ const SlideDiv = styled.div`
   padding: 0px 10px;
 `;
 
+const BestSellerInfo = styled.div`
+  text-align: center;
+`;
+
+const BestSellerPrice = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+`;
+
+const BestSellerPriceSpan = styled.span`
+  font-weight: 600;
+`;
 const BigBannerImg = styled.img`
   width: 100%;
   margin-top: 7%;

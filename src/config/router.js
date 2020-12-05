@@ -3,16 +3,16 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import Home from '../page/home';
+import Home from '../page/Home';
 import Carrier from '../page/carrier';
-import Order from '../page/searchOrder';
+import OrderForm from '../page/OrderForm';
 function RouterComponent() {
   return (
     <div>
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/carrier' component={Carrier} />
-          <Route exact path='/search-order' component={Order} />
+          <Route exact path='/search-order' component={OrderForm} />
           {/* <Route component={NotFound} />  */}
         </Switch>
     </div>
