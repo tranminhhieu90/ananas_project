@@ -35,7 +35,7 @@ function Footer() {
               <FooterListP>VỀ CÔNG TY</FooterListP>
               <FooterUl>
                 <li>
-                  <Link to="/carrier">Dứa tuyển dụng</Link>
+                  <Link to="/career">Dứa tuyển dụng</Link>
                 </li>
                 <li>Liên hệ nhượng quyền</li>
                 <li>Về Ananas</li>
@@ -74,7 +74,7 @@ function Footer() {
               <FooterListP>ĐĂNG KÝ NHẬN MAIL</FooterListP>
             </Col>
             <Col span={12} style={{ paddingLeft: 20 }}>
-              <img src={LogoAnanasFooter}></img>
+              <img src={LogoAnanasFooter} alt="logo-footer"></img>
             </Col>
           </Row>
           <Row

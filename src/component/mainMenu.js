@@ -19,7 +19,7 @@ function mainMenu() {
           <div>
             <UlMenu>
               <li>
-                <span>SẢN PHẨM</span>
+                <Link to="/product-list"> <span>SẢN PHẨM</span></Link>
               </li>
               <li>
                 <span>NAM</span>
@@ -73,6 +73,14 @@ const UlMenu = styled.ul`
     border-right: 2px solid gray;
 
     padding: 12px 25px 0px 0px;
+
+    a {
+      color: black;
+    }
+    a:hover {
+      color: #ff5f18;
+      cursor: pointer;
+    }
   }
   li:nth-last-child(1) {
     margin-right: 0px;
