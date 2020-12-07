@@ -71,19 +71,71 @@ export const CONTAINS = {
     {
       title: 'BÌNH MỚI RƯỢU "MỚI"',
       img_url: Banner2,
-      description: "Vẫn kế thừa vẻ tối giản, nguyên bản đã được định hướng bởi cái tên, Basas mới trở lại với những cải tiến đáng giá chắc chắn sẽ đem đến một trải nghiệm thú vị như hành trình chúng tôi làm ra nó.",
+      description:
+        "Vẫn kế thừa vẻ tối giản, nguyên bản đã được định hướng bởi cái tên, Basas mới trở lại với những cải tiến đáng giá chắc chắn sẽ đem đến một trải nghiệm thú vị như hành trình chúng tôi làm ra nó.",
     },
     {
       title: "OUTLET SALE",
       img_url: Banner3,
-      description: "Danh mục những sản phẩm bán tại Outlet Store, đã được phát hành trước một thời gian và đang rơi vào tình trạng bể size, hết mã.",
+      description:
+        "Danh mục những sản phẩm bán tại Outlet Store, đã được phát hành trước một thời gian và đang rơi vào tình trạng bể size, hết mã.",
     },
   ],
-  COLLECTIONS_EXTRA : {
+  COLLECTIONS_EXTRA: {
     title: "OUTLET SALE",
     img_url: SaleOff,
     description:
       "Danh mục những sản phẩm bán tại Outlet Store, đã được phát hành trước một thời gian và đang rơi vào tình trạng bể size, hết mã.",
-  }
+  },
+  ATTRIBUTES: [
+    {
+      title: "TRẠNG THÁI",
+      list_attribute: [
+        "Limited Edition",
+        "Online Only",
+        "Sale off",
+        "Pre-order",
+        "Best Seller",
+        "New Arrival",
+      ],
+    },
+    {
+      title: "KIỂU DÁNG",
+      list_attribute: [
+        "Low Top",
+        "High Top",
+        "Slip-on",
+      ],
+    },
+    {
+      title: "DÒNG SẢN PHẨM ",
+      list_attribute: [
+        "Basas",
+        "Vintas",
+        "Urbas",
+        "Pattas",
+        "Creas",
+        "Graphic Tee",
+        "Hoodie",
+        "Sweatshirt",
+        "Backpack | Ba lô",
+        "Socks | Vớ",
+        "Hat | Nón",
+        "Track 6",
+        "Basic Tee | Áo thun cơ bản",
+        "Shoelaces | Dây giày",
+      ],
+    },
+    {
+      title: "GIÁ",
+      list_attribute: [
+        "500k - 699k",
+        "> 600k",
+        "400k - 499k",
+        "300k - 399k",
+        "200k - 299k",
+        "<200k",
+      ],
+    },
+  ],
 };
-

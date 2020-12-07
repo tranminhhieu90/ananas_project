@@ -55,6 +55,7 @@ function CategoryFilter(props) {
     console.log("categoryFilters7777", categoryFilters);
     // pass Props to component parent
   }, [categoryFilters]);
+  
   return (
     <CategoryFilterDiv>
       <Row style={{ marginBottom: 10 }}>
@@ -114,6 +115,7 @@ const CategoryDiv = styled.div`
   align-items: center;
   justify-content: space-between;
   background: ${(props) => (props.isSelect ? "lightgray" : "")};
+  font-weight: ${(props) => (props.isSelect ? "600" : "")};
 
   :hover {
     background: lightgray;

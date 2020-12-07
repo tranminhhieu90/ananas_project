@@ -1,24 +1,24 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 function GenderFilter(props) {
-  const [genderFIler, setGenderFilter] = useState("");
+  const [genderFiler, setGenderFilter] = useState("");
 
   return (
     <UlGenderFilter>
       <LiGenderFilter
-        active={genderFIler === "all" ? true : false}
+        active={genderFiler === "all" ? true : false}
         onClick={() => setGenderFilter('all')}
       >
         <span>TẤT CẢ</span>
       </LiGenderFilter>
       <LiGenderFilter
-        active={genderFIler === "men" ? true : false}
+        active={genderFiler === "men" ? true : false}
         onClick={() => setGenderFilter('men')}
       >
         <span>NAM</span>
       </LiGenderFilter>
       <LiGenderFilter
-        active={genderFIler === "women" ? true : false}
+        active={genderFiler === "women" ? true : false}
         onClick={() => setGenderFilter('women')}
       >
         <span>NỮ</span>
