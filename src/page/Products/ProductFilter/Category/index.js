@@ -3,98 +3,46 @@ import { Row, Col } from "antd";
 import styled from "styled-components";
 import { CloseOutlined } from "@ant-design/icons";
 function CategoryFilter(props) {
-  const [categoryFilters, setCategoryFilters] = useState([]);
-  const [shoesFilter, setShoesFilter] = useState(false);
-  const [topFilter, setTopFilter] = useState(false);
-  const [accessoriesFilter, setAccessoriesFilter] = useState(false);
+  const [categoryFilters, setCategoryFilters] = useState([
+			{
+				"name": "Giày",
+				"slug": "shoes",
+        "isSelect": false
+			},
+			{
+				"name": "Nửa trên",
+				"slug": "top",
+        "isSelect": false
+			},
+			{
+				"name": "Phụ kiện",
+				"slug": "accessories",
+        "isSelect": false
+			}
+		]);
 
-  const handleSelectCategory = (categoryFilter) => {
-    if (categoryFilters.includes(categoryFilter)) {
-      return;
-    } else {
-      const newCategoryFiltersArr = [...categoryFilters];
-      newCategoryFiltersArr.push(categoryFilter);
-      setCategoryFilters(newCategoryFiltersArr);
+  const handleSelectCategory = (slug) => {
+    let existCategory = categoryFilters.find((obj) => obj.slug === slug);
+    if(existCategory){
+      existCategory.isSelect = true;
+      setCategoryFilters([...categoryFilters]);
     }
   };
-
-  useEffect(() => {
-    if (!shoesFilter) {
-      const newCategoryFiltersArr = [...categoryFilters];
-      var index = categoryFilters.indexOf("shoes");
-      if (index > -1) {
-        newCategoryFiltersArr.splice(index, 1);
-      }
-      setCategoryFilters(newCategoryFiltersArr);
-    }
-  }, [shoesFilter]);
-
-  useEffect(() => {
-    if (!topFilter) {
-      const newCategoryFiltersArr = [...categoryFilters];
-      var index = categoryFilters.indexOf("top");
-      if (index > -1) {
-        newCategoryFiltersArr.splice(index, 1);
-      }
-      setCategoryFilters(newCategoryFiltersArr);
-    }
-  }, [topFilter]);
-
-  useEffect(() => {
-    if (!accessoriesFilter) {
-      const newCategoryFiltersArr = [...categoryFilters];
-      var index = categoryFilters.indexOf("accessories");
-      if (index > -1) {
-        newCategoryFiltersArr.splice(index, 1);
-      }
-      setCategoryFilters(newCategoryFiltersArr);
-    }
-  }, [accessoriesFilter]);
-
-  useEffect(() => {
-    console.log("categoryFilters7777", categoryFilters);
-    // pass Props to component parent
-  }, [categoryFilters]);
   
   return (
     <CategoryFilterDiv>
       <Row style={{ marginBottom: 10 }}>
-        <Col span={24}>
+        {categoryFilters.map((category) => (
+          <Col span={24}>
           <CategoryDiv
-            isSelect={shoesFilter}
-            onClick={() => {
-              setShoesFilter(!shoesFilter);
-              handleSelectCategory("shoes");
-            }}
+            isSelect={category.isSelect}
+            onClick={() => handleSelectCategory(category.slug)}
           >
-            <span>Giày</span>
-            {shoesFilter && <CloseOutlined />}
+            <span>{category.name}</span>
+            {category.isSelect && <CloseOutlined />}
           </CategoryDiv>
         </Col>
-        <Col span={24}>
-          <CategoryDiv
-            isSelect={topFilter}
-            onClick={() => {
-              setTopFilter(!topFilter);
-              handleSelectCategory("top");
-            }}
-          >
-            <span>Nửa trên</span>
-            {topFilter && <CloseOutlined />}
-          </CategoryDiv>
-        </Col>
-        <Col span={24}>
-          <CategoryDiv
-            isSelect={accessoriesFilter}
-            onClick={() => {
-              setAccessoriesFilter(!accessoriesFilter);
-              handleSelectCategory("accessories");
-            }}
-          >
-            <span>Phụ kiện</span>
-            {accessoriesFilter && <CloseOutlined />}
-          </CategoryDiv>
-        </Col>
+        ))}
       </Row>
     </CategoryFilterDiv>
   );
