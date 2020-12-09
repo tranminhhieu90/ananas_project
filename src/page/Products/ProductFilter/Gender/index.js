@@ -1,28 +1,49 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 function GenderFilter(props) {
-  const [genderFiler, setGenderFilter] = useState("");
+  const mockData = [
+    {
+      name: "TẤT CẢ",
+      slug: "all",
+      isSelect: false,
+    },
+    {
+      name: "NAM",
+      slug: "men",
+      isSelect: false,
+    },
+    {
+      name: "NỮ",
+      slug: "women",
+      isSelect: false,
+    },
+  ];
+  const [genderFilers, setGenderFilter] = useState(mockData);
+
+  const handleOnClickGenderFilter = (slug) => {
+    const newGenderFilers = []
+    genderFilers.map((item, index) => {
+      if(item.slug === slug){
+        item.isSelect = true
+      } else {
+        item.isSelect = false
+      }
+      newGenderFilers.push(item)
+    })
+    setGenderFilter(newGenderFilers)
+  };
 
   return (
     <UlGenderFilter>
-      <LiGenderFilter
-        active={genderFiler === "all" ? true : false}
-        onClick={() => setGenderFilter('all')}
-      >
-        <span>TẤT CẢ</span>
-      </LiGenderFilter>
-      <LiGenderFilter
-        active={genderFiler === "men" ? true : false}
-        onClick={() => setGenderFilter('men')}
-      >
-        <span>NAM</span>
-      </LiGenderFilter>
-      <LiGenderFilter
-        active={genderFiler === "women" ? true : false}
-        onClick={() => setGenderFilter('women')}
-      >
-        <span>NỮ</span>
-      </LiGenderFilter>
+      {genderFilers.map((item, index) => (
+        <LiGenderFilter
+          key={index}
+          active={item.isSelect}
+          onClick={() => handleOnClickGenderFilter(item.slug)}
+        >
+          <span>{item.name}</span>
+        </LiGenderFilter>
+      ))}
     </UlGenderFilter>
   );
 }
