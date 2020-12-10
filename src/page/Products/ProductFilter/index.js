@@ -10,9 +10,9 @@ function ProductFiler(props) {
     <div>
       <GenderFilter />
       <CategoryFilter />
-      {ATTRIBUTES.map((attribute) => {
+      {ATTRIBUTES.map((attribute, index) => {
         return(
-          <Attribute title={attribute.title} list={attribute.list_attribute}/>
+          <Attribute key={index} title={attribute.title} list={attribute.list_attribute}/>
         )
       })}
     </div>

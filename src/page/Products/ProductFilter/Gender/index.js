@@ -21,16 +21,15 @@ function GenderFilter(props) {
   const [genderFilers, setGenderFilter] = useState(mockData);
 
   const handleOnClickGenderFilter = (slug) => {
-    const newGenderFilers = []
-    genderFilers.map((item, index) => {
-      if(item.slug === slug){
-        item.isSelect = true
+    const newGenderFilers = genderFilers.map((item, index) => {
+      if (item.slug === slug) {
+        item.isSelect = true;
       } else {
-        item.isSelect = false
+         item.isSelect = false;
       }
-      newGenderFilers.push(item)
-    })
-    setGenderFilter(newGenderFilers)
+      return item
+    });
+    setGenderFilter(newGenderFilers);
   };
 
   return (
