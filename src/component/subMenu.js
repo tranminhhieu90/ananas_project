@@ -21,10 +21,10 @@ function subMenu() {
           <Img src={Heart}></Img>Yêu thích
         </li>
         <li>
-          <Img src={Login}></Img>Đăng nhập
+          <Img src={ShoppingCart}></Img>Giỏ hàng
         </li>
         <li>
-          <Img src={ShoppingCart}></Img>Giỏ hàng
+          <Link to="/login"><Img src={Login}></Img>Đăng nhập</Link>
         </li>
       </UlMenu>
     </SubMenu>

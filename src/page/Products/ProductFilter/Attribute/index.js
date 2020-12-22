@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Row, Col } from "antd";
+import { Row } from "antd";
 import styled from "styled-components";
 import { DownOutlined, UpOutlined } from "@ant-design/icons";
 function AttibuteFilter(props) {
@@ -12,7 +12,7 @@ function AttibuteFilter(props) {
           onClick={() => {
             setToggleTitle(!toggleTitle);
           }}
-          color={toggleTitle}
+          isSelect={toggleTitle}
         >
           {title}
         </AttibuteTitle>
@@ -43,7 +43,7 @@ const AttibuteTitle = styled.span`
   font-size: 1.5em;
   font-weight: 700;
   margin-right: 10px;
-  color: ${(props) => (props.color ? "black" : "#f15e2c")};
+  color: ${(props) => (props.isSelect ? "black" : "#f15e2c")};
 `;
 
 const AttibuteFilterDiv = styled.div`

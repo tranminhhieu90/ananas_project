@@ -10,7 +10,7 @@ export const CONTAINS = {
       price: "420.000",
       sell_off_price: "325.000",
       img_url:
-        "https://ananas.vn/wp-content/uploads/stu_basas_A61015_11-500x500.jpg",
+        "https://ananas.vn/wp-content/uploads/pro_basictee_ABT00003_1-500x500.jpg",
     },
     {
       name: "Basas New Familiar - Low Top",
@@ -18,7 +18,7 @@ export const CONTAINS = {
       price: "420.000",
       sell_off_price: "325.000",
       img_url:
-        "https://ananas.vn/wp-content/uploads/stu_basas_A61015_11-500x500.jpg",
+        "https://ananas.vn/wp-content/uploads/pro_vintas_A61043_1-500x500.jpg",
     },
     {
       name: "Basas New Familiar - Low Top",
@@ -26,7 +26,7 @@ export const CONTAINS = {
       price: "420.000",
       sell_off_price: "325.000",
       img_url:
-        "https://ananas.vn/wp-content/uploads/stu_basas_A61015_11-500x500.jpg",
+        "https://ananas.vn/wp-content/uploads/pro_basictee_ABT00003_1-500x500.jpg",
     },
     {
       name: "Basas New Familiar - Low Top",
@@ -34,7 +34,7 @@ export const CONTAINS = {
       price: "420.000",
       sell_off_price: "325.000",
       img_url:
-        "https://ananas.vn/wp-content/uploads/stu_basas_A61015_11-500x500.jpg",
+        "https://ananas.vn/wp-content/uploads/stu_basas_A61024_1-500x500.jpg",
     },
     {
       name: "Basas New Familiar - Low Top",

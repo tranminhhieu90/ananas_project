@@ -6,6 +6,7 @@ import {
 import Home from '../page/Home';
 import Career from '../page/Career';
 import OrderForm from '../page/OrderForm';
+import LoginForm from '../page/LoginForm';
 import Products from '../page/Products';
 function RouterComponent() {
   return (
@@ -14,6 +15,7 @@ function RouterComponent() {
           <Route exact path='/' component={Home} />
           <Route exact path='/career' component={Career} />
           <Route exact path='/search-order' component={OrderForm} />
+          <Route exact path='/login' component={LoginForm} />
           <Route exact path='/product-list' component={Products} />
           {/* <Route component={NotFound} />  */}
         </Switch>
