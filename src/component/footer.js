@@ -11,7 +11,7 @@ import IconFooter from "../asset/icon_bocongthuong.png";
 function Footer() {
   return (
     <FooterDiv>
-      <Row>
+      <Row gutter={16}>
         <Col span={6} style={{ paddingLeft: 15 }}>
           <Row>
             <img src={StoreImg} alt="store"></img>
@@ -21,7 +21,7 @@ function Footer() {
           </Row>
         </Col>
         <Col span={18}>
-          <Row>
+          <Row gutter={8}>
             <Col span={6}>
               <FooterListP>SẢN PHẨM</FooterListP>
               <FooterUl>
@@ -77,13 +77,9 @@ function Footer() {
               <img src={LogoAnanasFooter} alt="logo-footer"></img>
             </Col>
           </Row>
-          <Row
-            style={{ marginTop: "10%", display: "flex", alignItems: "center" }}
-          >
-            <Col span={6}>
+          <Row>
+            <Col span={24} style={{ marginTop: "10%", display: "flex", alignItems: "center" }}>
               <img src={IconFooter} alt="icon- footer"></img>
-            </Col>
-            <Col span={18}>
               <FooterListSpan>
                 Copyright © 2020 Ananas. All rights reserved.
               </FooterListSpan>

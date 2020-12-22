@@ -38,8 +38,8 @@ function LoginForm() {
     <>
       <OrderDiv>
         <Row justify="center">
-          <Col span={16}>
-            <h3>THAM GIA CÙNG DỨA</h3>
+          <Col span={12}>
+            <h3>THAM GIA CÙNG ANANAS</h3>
             <form onSubmit={form.handleSubmit(hanldeSubmit)}>
               <InputField
                 className="order-form-input"

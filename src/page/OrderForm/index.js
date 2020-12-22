@@ -25,7 +25,7 @@ function OrderForm() {
     <>
       <OrderDiv>
         <Row justify="center">
-          <Col span={16}>
+          <Col span={12}>
             <h3>TRA CỨU ĐƠN HÀNG</h3>
             <form onSubmit={form.handleSubmit(hanldeSubmit)}>
               <InputField
@@ -76,4 +76,5 @@ const SearchOrder = styled.button`
 
   justify-content: center;
   align-items: center;
+  width: 100%;
 `;
